@@ -11,7 +11,7 @@ def evaluateCluster():
     logging.info('data sent for evaluation: {}'.format(data))
     result = solve(data)
     logging.info('my result: {}'.format(result))
-    ret = {'answers': result}
+    ret = {'answer': result}
     return jsonify(ret)
 
 def solve(grid):
