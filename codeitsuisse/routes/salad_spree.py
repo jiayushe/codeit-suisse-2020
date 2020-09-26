@@ -23,7 +23,8 @@ def evaluateSaladSpree():
     if result == INF:
         result = 0    
     logging.info('my result: {}'.format(result))
-    return jsonify(result)
+    ret = {'result': result}
+    return jsonify(ret)
 
 def getMinCost(arr, n):
     curr = sum(arr[:n])
