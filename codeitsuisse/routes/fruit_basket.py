@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 
 @app.route('/fruitbasket', methods=['POST'])
 def evaluateFruitBasket():
-    data = ast.literal_eval((request.get_data()).decode('UTF-8'));
+    data = ast.literal_eval((request.get_data()).decode('UTF-8'))
     logging.info('data sent for evaluation: {}'.format(data))
     result = solve(data)
     logging.info('my result: {}'.format(result))
