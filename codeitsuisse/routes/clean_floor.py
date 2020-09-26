@@ -32,6 +32,7 @@ def solve(arr):
             left -= curr
             if curr % 2 == 1:
                 ans += 1
+            # logging.info('ans = ' + str(ans) + ' when i = ' + str(i) + ' and arr = ' + str(arr))
             break
         if arr[i] + 1 <= arr[i + 1]:
             curr = arr[i]
@@ -41,8 +42,8 @@ def solve(arr):
             left -= 2 * curr + 1
             # early exit
             if left == 0:
+                # logging.info('ans = ' + str(ans) + ' when i = ' + str(i) + ' and arr = ' + str(arr))
                 break
-            i += 1
         else:
             curr = arr[i + 1]
             ans += 2 * curr
@@ -51,6 +52,7 @@ def solve(arr):
             left -= 2 * curr
             # early exit
             if left == 0:
+                # logging.info('ans = ' + str(ans) + ' when i = ' + str(i) + ' and arr = ' + str(arr))
                 break
             # resolve by itself
             curr = arr[i]
@@ -61,11 +63,15 @@ def solve(arr):
                 ans += 1
             # early exit
             if left == 0:
+                # logging.info('ans = ' + str(ans) + ' when i = ' + str(i) + ' and arr = ' + str(arr))
                 break
             # if current floor is even, we need to take another step to next floor
             if curr % 2 == 0:
                 ans += 1
                 arr[i + 1] += 1
-            i += 1
- 
+                left += 1
+        # logging.info('ans = ' + str(ans) + ' when i = ' + str(i) + ' and arr = ' + str(arr))
+        # increment
+        i += 1
+
     return ans
