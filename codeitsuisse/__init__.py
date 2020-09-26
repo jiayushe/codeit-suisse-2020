@@ -7,4 +7,5 @@ import codeitsuisse.routes.secret_message
 import codeitsuisse.routes.salad_spree
 import codeitsuisse.routes.clean_floor
 import codeitsuisse.routes.contact_trace
+import codeitsuisse.routes.revisit_geometry
 
