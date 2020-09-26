@@ -15,3 +15,4 @@ import codeitsuisse.routes.intelligent_farming
 import codeitsuisse.routes.fruit_basket
 import codeitsuisse.routes.olympiad_of_babylon
 import codeitsuisse.routes.optimized_portfolio
+import codeitsuisse.routes.snakes_ladders_smoke_mirrors
