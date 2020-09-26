@@ -54,7 +54,7 @@ def solve(s):
     ans = 'AACGT' * aacgt
     # insert A together with good strings
     idx = 0
-    while a > 0:
+    while a > 0 and idx < len(others):
         nx = min(a, 2)
         a -= nx
         ans += 'A' * nx
