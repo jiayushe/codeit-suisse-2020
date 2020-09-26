@@ -83,10 +83,20 @@ def evaluateRevisitGeometry():
     lineLine = line()
     pointsToLine(linePoints[0], linePoints[1], lineLine)
     # get intersects
-    result = []
+    intersects = []
     for l in shapeLines:
         intersect = point()
         if areIntersect(l, lineLine, intersect) and intersect >= l.start and intersect <= l.end:
-            result.append({'x': intersect.x, 'y': intersect.y})
+            # prevent duplicates
+            gd = True
+            for other in intersects:
+                if other == intersect:
+                    gd = False
+                    break
+            if gd:
+                intersects.append(intersect)
+    result = []
+    for intersect in intersects:
+        result.append({'x': intersect.x, 'y': intersect.y})
     logging.info('my result: {}'.format(result))
     return jsonify(result)
