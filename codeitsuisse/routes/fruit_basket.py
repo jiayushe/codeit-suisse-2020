@@ -15,13 +15,12 @@ def evaluateFruitBasket():
 
 def solve(data):
     weight = {}
-    weight['maApple'] = 50
-    weight['maAvocado'] = 40
-    weight['maBanana'] = 20
-    weight['maPineapple'] = 50
-    weight['maPomegranate'] = 40
-    weight['maRamubutan'] = 50
-    weight['maWatermelon'] = 60
+    weight['maApple'] = 40
+    weight['maAvocado'] = 41
+    weight['maPineapple'] = 15
+    weight['maPomegranate'] = 67
+    weight['maRamubutan'] = 69
+    weight['maWatermelon'] = 92
 
     ans = 0
     for fruit in data:
@@ -30,4 +29,4 @@ def solve(data):
         except KeyError:
             continue
 
-    return 0
+    return ans
