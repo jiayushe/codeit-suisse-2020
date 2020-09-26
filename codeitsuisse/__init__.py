@@ -14,3 +14,4 @@ import codeitsuisse.routes.social_distancing
 import codeitsuisse.routes.intelligent_farming
 import codeitsuisse.routes.fruit_basket
 import codeitsuisse.routes.olympiad_of_babylon
+import codeitsuisse.routes.optimized_portfolio
