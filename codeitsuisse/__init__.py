@@ -11,3 +11,4 @@ import codeitsuisse.routes.revisit_geometry
 import codeitsuisse.routes.cluster
 import codeitsuisse.routes.inventory_management
 import codeitsuisse.routes.social_distancing
+import codeitsuisse.routes.intelligent_farming
