@@ -4,3 +4,5 @@ app = Flask(__name__)
 
 import codeitsuisse.routes.square
 import codeitsuisse.routes.secret_message
+import codeitsuisse.routes.salad_spree
+

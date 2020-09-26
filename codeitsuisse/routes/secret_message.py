@@ -7,16 +7,16 @@ logger = logging.getLogger(__name__)
 @app.route('/encryption', methods=['POST'])
 def evaluateSecretMessage():
     data = request.get_json()
-    logging.info("data sent for evaluation {}".format(data))
+    logging.info('data sent for evaluation: {}'.format(data))
     result = []
     for test_case in data:
-        result.append(encrypt(test_case["n"], test_case["text"]))
-    logging.info("My result :{}".format(result))
+        result.append(encrypt(test_case['n'], test_case['text']))
+    logging.info('my result: {}'.format(result))
     return jsonify(result)
 
 def encrypt(n, text):
     # removing spaces and non alphanum characters
-    processed_text = ""
+    processed_text = ''
     for ch in text:
         if ch.isalnum():
             processed_text += ch.upper()
