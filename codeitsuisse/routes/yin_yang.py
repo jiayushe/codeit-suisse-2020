@@ -1,29 +1,26 @@
 import logging
 from flask import request, jsonify
 from codeitsuisse import app
+import sys
+from functools import lru_cache
 
+sys.setrecursionlimit(100000)
 logger = logging.getLogger(__name__)
-
-memoized = {}
 
 @app.route('/yin-yang', methods=['POST'])
 def evaluateYinYang():
-    global memoized
     data = request.get_json()
     logging.info('data sent for evaluation: {}'.format(data))
     numElem = data['number_of_elements']
     numOp = data['number_of_operations']
     elements = data['elements']
-    memoized = {}
     result = solve(numElem, numOp, elements)
     logging.info('my result: {}'.format(result))
     ret = {'result': result}
     return jsonify(ret)
 
+@lru_cache(maxsize=None)
 def solve(numElem, numOp, elements):
-    global memoized
-    if elements in memoized and numElem in memoized[elements]:
-        return memoized[elements][numElem][numOp]
     if numOp == 0:
         return 0
     if numElem == 1:
@@ -46,9 +43,4 @@ def solve(numElem, numOp, elements):
         if elements[idx] == 'Y':
             solvedMid += 1
         ans += solvedMid / numElem
-    if not elements in memoized:
-        memoized[elements] = {}
-    if not numElem in memoized[elements]:
-        memoized[elements][numElem] = {}
-    memoized[elements][numElem][numOp] = ans
     return ans   
