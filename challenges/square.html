@@ -1,0 +1,41 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./square_files/style.css">
+<style>
+	.markdown-body {
+		box-sizing: border-box;
+		min-width: 200px;
+		max-width: 980px;
+		margin: 0 auto;
+		padding: 45px;
+	}
+
+	@media (max-width: 767px) {
+		.markdown-body {
+			padding: 15px;
+		}
+	}
+</style>
+</head><body><article class="markdown-body">
+<h1 id="calculate-square-root">Calculate Square Root</h1>
+<hr>
+<p>Calculate square root of a number</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Expose a POST method with endpoint <code>/square</code></li>
+<li>Return integer result as json</li>
+</ul>
+<h2 id="constraints">Constraints</h2>
+<ul>
+<li>Only integer calculations</li>
+</ul>
+<h2 id="input-description">Input description</h2>
+<p>The HTTP POST request will come with a body of Content-Type: application/json</p>
+<h3 id="sample-input-json">Sample input JSON</h3>
+<pre><code>{
+  'input': 2
+}</code></pre><h3 id="sample-output-json">Sample output JSON</h3>
+<pre><code>{
+    4
+}
+</code></pre>
+</article></body></html>

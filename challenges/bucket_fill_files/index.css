@@ -1,0 +1,35 @@
+.clearDiv{
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+.clearMain{
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+.clearInnerDiv{
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.clearTop{
+    margin-top: 30px;
+}
+code{
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+pre{
+    background-color: whitesmoke;
+}
+.outline{
+    outline: solid 1px lightgrey;
+}
+.ascii-code-table{
+    border: solid 1px lightgrey;
+    border-collapse: collapse;
+    width: 100%;
+}
+.ascii-code-table td{
+    padding-left: 10px;
+}
+.section-header{
+    margin-bottom: 8px;
+}

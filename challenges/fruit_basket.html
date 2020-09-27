@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CIS2020 - Magical Fruit Basket</title>
+    
+    <style>
+        .centered-content {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body class="centered-wrapper">
+<div class="centered-content">
+    <h1 id="magical-fruit-basket">Magical Fruit Basket</h1>
+    <p>Mafrba, the magical fruits seller is holding a competition to find the best estimator in town.</p>
+    <p>The challenge is to guess the exact weight for a given basket of fruits.</p>
+    <p>The closer you are, the more points you get!</p>
+    <p>In a magical fruit basket, there can be up to 3 kinds of fruits where it can contain 1 to 100 of each kind.</p>
+    <p>At the start of every hour, the weight for each kind of fruit is randomly generated, set between 1 to 100 grams, inclusive.</p>
+    <p></p>
+    <p>For example, for a magical fruit basket of 1 maApple, 2 maWatermelons, and 3 maBanana, the sample input is given
+        below.</p>
+
+    <h2 id="sample-input">Sample Input</h2>
+    <p style="background-color:rgb(246, 248, 250)">{
+        "maApple": 1,
+        "maWatermelon": 2,
+        "maBanana": 3
+        }</p>
+    <p>The expected output would be the guessed weight in grams, no decimal places.</p>
+    <p>So, if your guess is that maApple is 10g, maWatermelon is 20g, and maBanana is 30g.</p>
+    <p>Your final guess for the basket of fruits should be 1*10 + 2*20 + 3*30 = 140g</p>
+
+    <h2 id="sample-output">Sample Expected Output</h2>
+    <p style="background-color:rgb(246, 248, 250)">140</p>
+    <p>After you have made your guess, Mafrba will place the basket on the magic weighing scale.</p>
+    <p>Then, you will be updated through telepathy(your group's dashboard), how far your guess was from the actual weight of the magical fruit basket rounded to the nearest 100 grams.</p>
+    <p>Your final guess for the basket of fruits should be 1*10 + 2*20 + 3*30 = 140g</p>
+
+    <p>For example:</p>
+    <p>If the actual weight of the magical fruit basket is 190g:</p>
+    <p>- Your guess is 140g, you will see that your guess is 100g away, rounded up from 50g.</p>
+    <p>- Your guess is 200g, you will see that your guess is 0g away, rounded down from 10g.</p>
+    <p>Do note that you will only get the full score if you guess the exact weight(whole number)</p>
+
+    <h2 id="requirements">Requirements</h2>
+    <p>Expose 1 POST endpoint /fruitbasket for evaluation</p>
+</div>
+
+
+</body></html>
