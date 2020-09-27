@@ -17,3 +17,4 @@ import codeitsuisse.routes.olympiad_of_babylon
 import codeitsuisse.routes.optimized_portfolio
 import codeitsuisse.routes.snakes_ladders_smoke_mirrors
 import codeitsuisse.routes.supermarket_maze
+import codeitsuisse.routes.yin_yang
