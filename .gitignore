@@ -94,3 +94,5 @@ ENV/
 
 # intellij idea
 .idea/
+
+.DS_Store
